@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Navbar Styling */
+#navbar {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background-color: #1c1c2d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  overflow-y: auto;
+  transition: all 0.3s;
+}
+
+#navbar header {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ff4b5c;
+  transition: 20px ease-in-out;
+}
+
+#navbar header:hover{
+  box-shadow: red;
+}
+
+#navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 10px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  margin-bottom: 5px;
+}
+
+#navbar .nav-link:hover {
+  background-color: #ff4b5c;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Main Content Styling */
+#main-doc {
+  margin-left: 300px;
+  padding: 40px;
+  width: calc(100% - 300px);
+}
+
+span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.main-section {
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.main-section header {
+  font-size: 1.9rem;
+  color: #1c1c2d;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff4b5c;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Paragraph Styling */
+.main-section p {
+  margin-bottom: 15px;
+  line-height: 1.75;
+  font-size: 1rem;
+  text-align: justify;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.main-section p:hover {
+  color: #ff4b5c;
+}
+
+/* UL + LI Styling inside Sections */
+.main-section ul {
+  margin: 15px 0 20px 25px;
+  padding: 0;
+  list-style-type: disc;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+  transition: color 0.3s;
+}
+
+.main-section ul>li:hover {
+  color: #ff4b5c; /* match paragraph hover color */
+}
+
+.main-section li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.main-section li:hover {
+  transform: translateX(5px);
+  color: #ff4b5c; /* hover color matches your theme */
+}
+
+
+.main-section img{
+    height: 30rem;
+    align-items: center ;
+}
+
+/* Smooth Scroll Offset for Fixed Navbar */
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* height of the navbar */
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/* Scrollbar Styling for Navbar */
+#navbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#navbar::-webkit-scrollbar-track {
+  background: #1c1c2d;
+}
+
+#navbar::-webkit-scrollbar-thumb {
+  background-color: #ff4b5c;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 15px;
+  }
+
+  #navbar .nav-link {
+    padding: 8px 15px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+  }
+}
