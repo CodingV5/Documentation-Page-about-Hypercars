@@ -137,8 +137,9 @@ span{
 
 
 .main-section img{
-    height: 30rem;
-    align-items: center ;
+    max-width: 100%;
+    height: auto;
+    max-height: 30rem;
 }
 
 /* Smooth Scroll Offset for Fixed Navbar */
@@ -164,7 +165,7 @@ span{
   border-radius: 10px;
 }
 
-/* Responsive */
+/* Responsive - Tablet (900px and below) */
 @media screen and (max-width: 900px) {
   body {
     flex-direction: column;
@@ -179,15 +180,147 @@ span{
     padding: 10px 15px;
   }
 
+  #navbar header {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
   #navbar .nav-link {
     padding: 8px 15px;
     margin-bottom: 0;
     margin-right: 10px;
+    font-size: 1rem;
   }
 
   #main-doc {
     margin-left: 0;
     padding: 20px;
     width: 100%;
+  }
+
+  .main-section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .main-section header {
+    font-size: 1.5rem;
+  }
+
+  .main-section p {
+    font-size: 0.95rem;
+  }
+
+  .main-section ul {
+    margin: 15px 0 20px 20px;
+    font-size: 0.95rem;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive - Mobile (640px and below) */
+@media screen and (max-width: 640px) {
+  * {
+    cursor: auto;
+  }
+
+  #navbar {
+    padding: 8px 10px;
+  }
+
+  #navbar header {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  #navbar .nav-link {
+    padding: 8px 12px;
+    margin-right: 8px;
+    font-size: 0.9rem;
+  }
+
+  #main-doc {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .main-section {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .main-section header {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .main-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .main-section ul {
+    margin: 12px 0 15px 18px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .main-section li {
+    margin-bottom: 6px;
+  }
+
+  .main-section img {
+    max-height: 20rem;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive - Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  #navbar header {
+    font-size: 1rem;
+  }
+
+  #navbar .nav-link {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  #main-doc {
+    padding: 12px;
+  }
+
+  .main-section {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .main-section header {
+    font-size: 1.2rem;
+  }
+
+  .main-section p {
+    font-size: 0.85rem;
+  }
+
+  .main-section ul {
+    margin: 10px 0 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  .main-section img {
+    max-height: 15rem;
+  }
+
+  span {
+    font-size: 0.9rem;
   }
 }
